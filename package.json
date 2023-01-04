@@ -1,0 +1,19 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "\"Our first project\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright"
+  },
+  "keywords": [
+    "first",
+    "project"
+  ],
+  "author": "Alex",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.29.1",
+    "playwright": "^1.29.1"
+  }
+}
