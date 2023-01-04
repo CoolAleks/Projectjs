@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { login, password } from '../user';
+import { login, password, wrongPassword } from '../user';
 
 const { chromium } = require("playwright");
 
@@ -32,7 +32,7 @@ test('test2', async () => {
   await page.getByPlaceholder('Email').click();
   await page.getByPlaceholder('Email').fill(login);
   await page.getByPlaceholder('Пароль').click();
-  await page.getByPlaceholder('Пароль').fill("gfhf");
+  await page.getByPlaceholder('Пароль').fill(wrongPassword);
   await page.getByTestId('login-submit-btn').click();
   await expect(page.getByTestId('login-error-hint')).toBeVisible();
 });
